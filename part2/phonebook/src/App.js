@@ -32,7 +32,7 @@ const App = () => {
   const addNumber = (event) =>{
     event.preventDefault()
     const duplicate = persons.filter(person => person.name === newName)
-    console.log('duplicate is ', duplicate)
+    console.log('duplicate is', duplicate)
     if (duplicate.length !== 0){
       if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)){
         const id = duplicate[0].id
