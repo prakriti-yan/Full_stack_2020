@@ -19,6 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://notes-nodejs-90.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },
