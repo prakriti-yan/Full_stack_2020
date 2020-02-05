@@ -90,9 +90,17 @@ const App = () => {
       setPersons(persons.concat(returnedPerson))
       setNewName('')
       setNewNumber('')
+      setErrorMessage(`${newName} has been added!`)
+      setTimeout(()=>{setErrorMessage(null)},3000)
     })
-    setErrorMessage(`${newName} has been added!`)
-    setTimeout(()=>{setErrorMessage(null)},3000)
+    .catch(error=>{
+      // (`Person validation failed! Path name ${error.response.data.name} is shorter than the minilength 3!`)
+      console.log(error.response)
+      const message = error.response.data.error
+      setErrorMessage(`${message}`)
+      setTimeout(()=>{setErrorMessage(null)},3000)
+    })
+    
   }}
 
   useEffect(()=>{
