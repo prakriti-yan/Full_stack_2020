@@ -3,26 +3,7 @@ import Persons from './components/Persons'
 import Filter from './components/Filter'
 import PersonForm from './components/PersonForm'
 import personService from './services/number'
-
-const Notification = ({ message }) =>{
-	const errorStyle = {
-		color: 'green',
-		background: 'lightgrey',
-		fontSize: 20,
-		borderStyle: 'solid',
-		borderRadius: 5,
-		padding: 10,
-		marginBottom: 10
-	}
-	if (message === null){
-		return null
-	}else{
-		return(
-			<div style= {errorStyle}>
-				{message}
-			</div>
-		)}
-}
+import Notification from './components/Notification'
 
 const App = () => {
 	const [ persons, setPersons] = useState([]) 
@@ -31,7 +12,6 @@ const App = () => {
 	const [ newFilter, setNewFilter ] = useState('')
 	const [ errorMessage, setErrorMessage] = useState(null)
 
-	// includes() method is used to find the filter in the name information.
 	const filteredPerson = 
     persons.filter(persons=> persons.name.toUpperCase().includes(newFilter.toUpperCase()))
   
@@ -120,13 +100,15 @@ const App = () => {
 
 	return (
 		<div>
-			<h2>Phonebook</h2>
-			<Notification message= {errorMessage} />
+			<h2 className='title'>Phonebook</h2>
+			<Notification message= {errorMessage}/>
 			<Filter newFilter = {newFilter} handleFilterChange={handleFilterChange} />
-			<h2>Add a new</h2>
-			<PersonForm addNumber={addNumber} newName={newName} newNumber={newNumber} handleNameChange={handleNameChange} handleNumberChange={handleNumberChange}/>
-			<h2>Numbers</h2>
-			<Persons filteredPerson={filteredPerson} handleClick = {removePerson}/>
+			<div  className='container'>
+				<PersonForm addNumber={addNumber} newName={newName} newNumber={newNumber} handleNameChange={handleNameChange} handleNumberChange={handleNumberChange}/>
+			</div>
+			<div  className='container'>
+				<Persons filteredPerson={filteredPerson} handleClick = {removePerson}/>
+			</div>
 		</div>
 	)
 }
