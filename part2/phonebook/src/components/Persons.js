@@ -1,7 +1,7 @@
 import React from 'react'
 import Print from './Print'
 import '../global.css'
-// im/port personService from '../services/number'
+import propTypes from 'prop-types'
 
 const Persons =(props) =>{
 	const { filteredPerson, handleClick  }=props
@@ -18,4 +18,8 @@ const Persons =(props) =>{
 		</div>  )
 }
 
+Persons.propTypes = {
+	filteredPerson: propTypes.array.isRequired,
+	handleClick: propTypes.func.isRequired
+}
 export default Persons

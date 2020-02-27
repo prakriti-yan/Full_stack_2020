@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 const Filter = (props) =>{
 	const { newFilter, handleFilterChange } = props
@@ -12,5 +13,9 @@ const Filter = (props) =>{
 	)
 }
 
+Filter.propTypes = {
+	newFilter: propTypes.string.isRequired,
+	handleFilterChange: propTypes.func.isRequired
+}
 export default Filter
 

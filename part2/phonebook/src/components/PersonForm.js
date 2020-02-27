@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 
 const PersonForm = (props) =>{
 	const { addNumber, newName, newNumber, handleNameChange, handleNumberChange} = props
@@ -20,6 +21,14 @@ const PersonForm = (props) =>{
 			</form>
 		</div>
 	)
+}
+
+PersonForm.propTypes = {
+	addNumber: propTypes.func.isRequired,
+	newName: propTypes.string.isRequired,
+	newNumber: propTypes.string.isRequired,
+	handleNameChange: propTypes.func.isRequired,
+	handleNumberChange: propTypes.func.isRequired
 }
 
 export default PersonForm

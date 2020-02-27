@@ -10,7 +10,7 @@ const App = () => {
 	const [ newName, setNewName ] = useState('')
 	const [ newNumber, setNewNumber ] = useState('')
 	const [ newFilter, setNewFilter ] = useState('')
-	const [ errorMessage, setErrorMessage] = useState(null)
+	const [ errorMessage, setErrorMessage ] = useState(null)
 
 	const filteredPerson = 
     persons.filter(persons=> persons.name.toUpperCase().includes(newFilter.toUpperCase()))
@@ -55,6 +55,7 @@ const App = () => {
 						setPersons(persons.filter(n=>n.id !==id))
 						setNewName('')
 						setNewNumber('')
+						console.log(error)
 					})
 			}
 			setNewName('')
