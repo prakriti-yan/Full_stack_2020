@@ -12,7 +12,7 @@ const create = newNameObject =>{
 }
 
 const deleteItem = (id) =>{
-	 axios.delete(`${baseUrl}/${id}`)
+	axios.delete(`${baseUrl}/${id}`)
 }
 
 const update =(id, updatedName) =>{
