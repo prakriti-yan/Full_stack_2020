@@ -2,16 +2,17 @@ import React from 'react'
 import { vote } from '../reducers/anecdoteReducer'
 import { setMessage } from '../reducers/notificationReducer'
 import { connect } from 'react-redux'
+// import Filter from './Filter'
 
-const AnecdoteList = (props) => {    
-    const addVote = (id, content) => {
+const AnecdoteList = (props) => {      
+  const addVote = (id, content) => {
       props.vote(id)
       props.setMessage(`You voted '${content}'`)
       setTimeout( ()=> props.setMessage(''), 5000)
     } 
     return (
-      <div>
-      {props.filteredAnecdotes.map(anecdote =>
+      <>
+      {props.filtered.map(anecdote =>
         <div key={anecdote.id}>
           <div>
             {anecdote.content}
@@ -22,7 +23,7 @@ const AnecdoteList = (props) => {
           </div>
         </div>
       )}
-      </div>
+      </>
     )
   }
 
@@ -31,9 +32,8 @@ const filterAnec = ({ anecdotes, filter }) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
-    filteredAnecdotes: filterAnec(state)
+    filtered: filterAnec(state)
   }
 }
 

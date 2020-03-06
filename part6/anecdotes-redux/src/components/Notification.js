@@ -16,7 +16,7 @@ const Notification = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
+  // console.log(state)
   return {
     message: state.message
   }
