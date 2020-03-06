@@ -2,13 +2,11 @@ import React from 'react'
 import { vote } from '../reducers/anecdoteReducer'
 import { setMessage } from '../reducers/notificationReducer'
 import { connect } from 'react-redux'
-// import Filter from './Filter'
 
 const AnecdoteList = (props) => {      
-  const addVote = (id, content) => {
-      props.vote(id)
-      props.setMessage(`You voted '${content}'`)
-      setTimeout( ()=> props.setMessage(''), 5000)
+  const addVote = (anecdote) => {
+      props.vote(anecdote)
+      props.setMessage(`You voted '${anecdote.content}'`, 5)
     } 
     return (
       <>
@@ -19,7 +17,7 @@ const AnecdoteList = (props) => {
           </div>
           <div>
             has {anecdote.votes} vote
-            <button onClick={() => addVote(anecdote.id, anecdote.content)}>vote</button>
+            <button onClick={() => addVote(anecdote)}>vote</button>
           </div>
         </div>
       )}

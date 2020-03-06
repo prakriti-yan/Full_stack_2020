@@ -3,7 +3,7 @@
     {
       "content": "If it hurts, do it more often",
       "id": "47145",
-      "votes": 0
+      "votes": 3
     },
     {
       "content": "Adding manpower to a late software project makes it later!",
@@ -13,7 +13,7 @@
     {
       "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
       "id": "69581",
-      "votes": 0
+      "votes": 3
     },
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
@@ -28,62 +28,12 @@
     {
       "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
       "id": "98312",
-      "votes": 0
+      "votes": 1
     },
     {
-      "content": "Evening",
+      "content": "This is a new testing anecdote!",
       "votes": 0,
-      "id": "lfggYsg"
-    },
-    {
-      "content": "Evening",
-      "votes": 0,
-      "id": "nt7rhau"
-    },
-    {
-      "content": "Hi",
-      "votes": 0,
-      "id": "7cgXpGg"
-    },
-    {
-      "content": "Good morning",
-      "votes": 0,
-      "id": "s8D7E4w"
-    },
-    {
-      "content": "Love and i=light",
-      "votes": 0,
-      "id": "5o2_wHI"
-    },
-    {
-      "content": "Mine",
-      "votes": 0,
-      "id": "BSqq9uA"
-    },
-    {
-      "content": "moi",
-      "votes": 0,
-      "id": "NJn8-XF"
-    },
-    {
-      "content": "Good morning",
-      "votes": 0,
-      "id": "TxbUbKz"
-    },
-    {
-      "content": "Love and peace",
-      "votes": 0,
-      "id": "jM9W5Ll"
-    },
-    {
-      "content": "Evening",
-      "votes": 0,
-      "id": "49B7Yz_"
-    },
-    {
-      "content": "Error check",
-      "votes": 0,
-      "id": "9KNjjPF"
+      "id": "hbWOXD9"
     }
   ]
 }
