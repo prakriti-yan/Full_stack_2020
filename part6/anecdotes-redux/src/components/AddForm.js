@@ -1,14 +1,15 @@
 import React from 'react';
 import { add } from '../reducers/anecdoteReducer'
 import { setMessage } from '../reducers/notificationReducer'
+import { connect } from 'react-redux'
 
-const AddForm = ({ store }) => {
+const AddForm = (props) => {
     const addAnec = (event) => {
       event.preventDefault()
       const content = event.target.anecdote.value
-      store.dispatch(add(content))
-      store.dispatch(setMessage(`"${content}" has been created!`))
-      setTimeout( ()=> store.dispatch(setMessage('')), 5000)
+      props.add(content)
+      props.setMessage(`"${content}" has been created!`)
+      setTimeout( ()=> props.setMessage(''), 5000)
     }
 
     return (
@@ -21,4 +22,21 @@ const AddForm = ({ store }) => {
     </div>)
   }
 
-export default AddForm
+  // const mapStateToProps = (state) => {
+  //   console.log(state)
+  //   return {
+  //     anecdotes: state.anecdotes,
+  //     filter: state.filter
+  //   }
+  // }
+  
+  const mapDispatchToProps = {
+    setMessage, 
+    add
+  }
+
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AddForm)
